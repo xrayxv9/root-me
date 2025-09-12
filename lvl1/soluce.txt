@@ -1,0 +1,11 @@
+une fois DL le .image, il fallait l'extraire, pour se faire
+on utilise la commande:
+
+foremost -i <nom du .image> -o <nom du ficher desire>
+
+puis on se deplace dans les fichiers desire
+une fois l'image trouver, on fais un :
+
+exiftool -all <nom du fichier>
+
+ca nous donne toutes les metadonnees.
