@@ -1,0 +1,12 @@
+il faut clone:
+git clone https://github.com/frankthetank-music/Acropalypse-Multi-Tool
+
+pour pouvoir recupere la partie crop de l'image que l'on nous donne
+ainsi on obtient le mot de passe :
+-=b9w9h^+j%\x-rMPUqv9Vv`@X%*=a
+
+grace a ca on obtient le mot de passe de keepass
+keepassxc ./Database.kdbx
+
+puis dans la section internet on a le mot de passe !
+@cropalypse_vuln_is_impressive
