@@ -1,0 +1,20 @@
+wget https://static.root-me.org/forensic/ch2/ch2.tbz2
+
+ok bon celui la est pas bien complexe.
+
+en gros on prend le .dmp
+c'est a dire que c'est une copie de la RAM 
+en utilisant foremost on trouve des trucs comme des videos, des images plein de choses, mais a moitie corrompu.
+En fait quand on ouvre une image, une video et plein d'autre chose, une partie reste en RAM c'est pour ca que mon foremost a fonctionner.
+
+au final la bonne solution est d'utiliser la command strings qui permet de lire les donnees d'un .dmp (en ouvrant de base on va voir ca ^@ en boucle ! (avec nvim notamment))
+
+du coup on fais 
+
+strings ./ch.dmp | grep -i "computername"
+
+la partie -i, permet d'ignorer le Case (lower, upper)
+comme ca je regarde partout en prenant le computername
+
+resultat :
+WIN-ETSA91RKCFP
