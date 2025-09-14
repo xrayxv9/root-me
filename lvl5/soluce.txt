@@ -1,0 +1,24 @@
+je me sens idiot..
+
+wget https://static.root-me.org/forensic/ch33/ch33.zip
+
+Bon on me donne une VM deja faite, premiere connextion on te demande un login et un mdp
+au final tu n'a rien
+
+en suite tu vas dans le grub, press e sur Debian pour edit son lancement
+
+quand tu es sur la ligne "linux"
+on remplace le ro => read only
+en rw => read write
+et on rajoute
+init=/bin/bash
+pour que au lancement ce soit bash en mode sudo qui se lancement
+en suite 
+ls
+cd root
+ls -a
+cat .passwd
+
+soluce :
+
+F1aG-M3_PlEas3:)
