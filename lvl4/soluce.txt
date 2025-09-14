@@ -1,0 +1,21 @@
+Ok bon celui la est plus complexe !
+
+donc dans une version anterrieur de Kee Pass il y avait une faille de securite 
+CVE-2023-32784
+
+en cherchant ensuite sur github on trouve des exploit de cette faille.
+
+keepass-dump-extractor -f all > wordlist.txt
+
+et voila on obtient :
+	ere_Is_My_V3ry_S3cr3t_P4ssw0rd2024!
+
+Donc on rajoute un 'h' pour fais here_Is...
+puis on reflechie et on se rend compte que les premieres lettres sont en Maj
+
+	Here_Is_My_V3ry_S3cr3t_P4ssw0rd2024!
+
+il s'agit du mot de passe de la base de donnee KeePass
+une fois fais on va dans les notes et hop le flag
+
+	RM{Upd4T3_KeEPas5_t0_2.54}
