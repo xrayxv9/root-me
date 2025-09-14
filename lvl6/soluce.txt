@@ -1,0 +1,43 @@
+wget wget https://static.root-me.org/forensic/ch29/ch29.tar
+
+ok du coup celui ci est fun, il y a une notion qu'il faut connaitre mais a part ca c'est cool.
+
+
+Donc on commence avec un fichier une fois qu'on le des tar
+
+tar xvf ch29.tar
+
+on peut voir que le contenue du fichier est un container docker
+tu peux le voir juste en faisant un cat de repositories.
+
+donc mtn qu'on sait ca, on peut utiliser une outil qui s'appel container-diff, 
+avec le -h on voit donc qu'on peut faire une analyse d'un fichier docker
+on fais un -h sur le analyse et on voit le -t
+grace a ca a voit que l'on peut specifier ce que l'on veut apt, history...
+
+on veut voir l'historique des commandes faites on va donc faire
+
+container-diff analyze -t history
+
+on optient donc toutes les commandes, 
+voici la plus interressente:
+
+-/bin/sh -c echo -n $(curl -s https://pastebin.com/raw/P9Nkw866) | openssl enc -aes-256-cbc -iter 10 -pass pass:$(cat /pass.txt) -out flag.enc
+
+donc on sait mtn que le fichier a ete pris depuis un pastbin
+
+puis que la methode de cryptage utilise est aes-256-cbc
+iter : le nombre de fois que l'on encrypte la donnee, et la on voit donc que le pass qui est mis est un fichier dans le docker a la racine.
+On voit egalement que le flag est garder dans le docker en tant que flag.enc
+
+et voila plus qu'a enlever tout les fichier qui sont en .tar et on a tout nos fichier, commande final :
+
+openssl aes-256-cbc -iter 10 -in flag.enc -out ../flag.txt
+a ce moment on nous demande un mot de passe, on met donc le mdp 
+
+d4428185a6202a1c5806d7cf4a0bb738a05c03573316fe18ba4eb5a21a1bc8ea
+
+qui est dans le pass.txt
+
+et le flag :
+Well_D0ne_D0ckER_L@y3rs_Inspect0R
