@@ -1,0 +1,14 @@
+sudo -l
+
+on voit toutes les commandes faisable par un utilisateur, 
+une wildcard dans le notes *
+et on sait qu'il a le droit a la commande cat
+donc on peut sudo -u app-script-ch1-cracked
+pour effectuer une commande depuis son utilisateur
+puis on prend le chemin absolu depuis le / (on peut utiliser la ~)
+
+pour finir comme on a une wildcard on en profite, on monte dans les fichier jusque dans les notes puis on met pour finir ../ch1cracked/.passwd
+
+
+
+donc on 
