@@ -1,0 +1,12 @@
+You clone ldap2json
+go into analysis
+search for kerberosable people
+```
+[]> search_for_kerberoastable_users
+[CN=Alexandria,CN=Users,DC=ROOTME,DC=local]
+```
+
+once done you search for more precise with this command:
+	object_by_dn CN=Alexandria,CN=Users,DC=ROOTME,DC=local
+
+you should understand seeing both the command and the result of the last thing right above
