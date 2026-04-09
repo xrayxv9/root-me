@@ -1,3 +1,6 @@
 [submodule "forensic/lvl2/Acropalypse-Multi-Tool"]
 	path = forensic/lvl2/Acropalypse-Multi-Tool
 	url = https://github.com/frankthetank-music/Acropalypse-Multi-Tool.git
+[submodule "forensic/lvl7/ldap2json"]
+	path = forensic/lvl7/ldap2json
+	url = https://github.com/p0dalirius/ldap2json.git
