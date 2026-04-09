@@ -1,0 +1,8 @@
+il suffit d'aller dans le tmp
+on creer un fichier qu'on nomme ls
+grace a  on met dedans du bash script pour que ca effectue la commande cat sur le fichier /challenge/app-script/<numero de l'exo>/.passwd
+pour que ca execute mon LS et non pas celui de base je l'ajoute dans le path en PREMIER
+
+export PATH="/tmp/xray":PATH
+
+et hope
